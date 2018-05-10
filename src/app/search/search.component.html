@@ -1,0 +1,16 @@
+<app-navigator></app-navigator>
+<div class="search-block">
+    <p style="color:#f3efdb">Search by:</p><br>
+    <div>
+    <select  [(ngModel)]="key" value = "Title">
+       <option value="Title">Title</option>
+       <option value="Category">Category</option>
+       <option value="Author">Author</option>
+       <option value="isbn">ISBN</option>
+    </select>
+    </div>
+  <br>
+  <input [(ngModel)]="value" type="text">
+  <br><br>
+  <button (click)="search()" > search </button>
+</div>

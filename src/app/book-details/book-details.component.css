@@ -1,0 +1,61 @@
+.favbut {
+    padding-top: 2%;
+    padding-right: 1%;
+}
+
+.review {
+    border-style: solid;
+    border-color: #333;
+    border-radius: 0.65cm;
+    background-color: #31708f8a;
+    color: white;
+    font-size:20px;
+    margin-bottom: 20px;
+}
+
+.dis {
+   display: inline-block;
+   color: #f5f5f5;
+   font-size: 20px;
+   background-color: #132e407a;
+}
+
+
+input.rate {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+ label.rate {
+  float: right;
+  color: #C8C8C8;
+}
+
+label.rate:before {
+  margin: 5px;
+  content: "\f005";
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  color: #ccc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  user-select: none;
+
+}
+
+input.rate:checked ~ label:before {
+  color: #FFC107;
+}
+
+label.rate:hover ~ label:before {
+  color: #ffdb70;
+}
+
+label.rate:hover:before {
+  color: #FFC107;
+}

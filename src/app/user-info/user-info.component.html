@@ -1,0 +1,62 @@
+<app-navigator></app-navigator>
+<div class ="card">
+  <div style = "text-align: center;">
+      <img src="{{user.pictureUrl}}" alt="loading ..." style="width:200px">
+      <h1>{{user.name}}</h1>
+      <h4>{{user.email}}</h4>
+  </div>
+</div>
+
+<div [style.display]="user['favorites'] == 0 ? 'none' : ''">
+<h2>Favourite books</h2>
+<div class="outer">
+  <div (click) = "showDetails(book)"
+      class="inner" *ngFor="let book of user['favorites'];">
+       <div>
+       <img src= {{book.imageLink}}>
+       </div>
+       <div style ="white-space: initial; width:230px;">
+         Title: {{book.title}}
+       </div>
+       <div>
+         Author: {{book.author}}
+       </div>
+  </div>
+</div>
+</div>
+
+<div [style.display]="user['toRead'] == 0 ? 'none' : ''">
+<h2>To be read books</h2>
+<div class="outer">
+  <div (click) = "showDetails(book)"
+      class="inner" *ngFor="let book of user['toRead'];">
+       <div>
+       <img src= {{book.imageLink}}>
+       </div>
+       <div style ="white-space: initial; width:230px;">
+         Title: {{book.title}}
+       </div>
+       <div>
+         Author: {{book.author}}
+       </div>
+  </div>
+</div>
+</div>
+
+<div [style.display]="user['read'].length == 0 ? 'none' : ''">
+<h2>Read books</h2>
+<div class="outer">
+  <div (click) = "showDetails(book)"
+       class="inner" *ngFor="let book of user['read'];">
+       <div>
+       <img src= {{book.imageLink}}>
+       </div>
+       <div style ="white-space: initial; width:230px;">
+         Title: {{book.title}}
+       </div>
+       <div>
+         Author: {{book.author}}
+       </div>
+  </div>
+</div>
+</div>

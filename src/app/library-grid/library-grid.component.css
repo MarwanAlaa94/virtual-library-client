@@ -1,0 +1,26 @@
+.innergrid div {
+    word-wrap: break-word;
+    overflow:hidden;
+    white-space: initial;
+    width: 230px;
+}
+
+.innergrid-text {
+    word-wrap: break-word;
+    overflow:hidden;
+    height: 20px;
+    white-space: initial;
+}
+
+.innergrid {
+    width: 20.5%;
+    background-color: rgba(0,0,0,.0001);
+    float: none;
+    height: 322px;
+    margin: 0 0.25%;
+    display: inline-block;
+    font-size: 20;
+    overflow: hidden;
+    zoom: 1;
+    cursor: pointer;
+}

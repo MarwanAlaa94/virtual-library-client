@@ -1,0 +1,18 @@
+<app-search></app-search>
+
+<div *ngFor="let category of categories;">
+<div *ngIf = "books[category] != null" class="outer">
+  <h1 (click)="search(category)" style="cursor: pointer;">{{category}}</h1>
+  <div (click) ="showDetails(book)" class="inner" *ngFor="let book of books[category];">
+       <div>
+       <img src= {{book.imageLink}}>
+       </div>
+       <div style ="white-space: initial; width:230px;">
+         Title: {{book.title}}
+       </div>
+       <div>
+         Author: {{book.author}}
+       </div>
+  </div>
+</div>
+</div>

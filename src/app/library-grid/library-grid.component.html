@@ -1,0 +1,19 @@
+<app-navigator></app-navigator>
+<h1 style="margin-left: 20px;"><u>{{value + "  " + key}} Books</u></h1>
+<br>
+<br>
+<div class="container">
+<div (click) = "showDetails(book)" class="innergrid" *ngFor="let book of books;">
+
+    <div>
+        <img src= {{book.imageLink}}>
+    </div>
+    <div class="innergrid-text">
+        Title: {{book.title}}
+    </div>
+    <div class="innergrid-text">
+        Author: {{book.author}}
+    </div>
+</div>
+
+</div>
